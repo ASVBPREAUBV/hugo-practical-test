@@ -23,3 +23,8 @@ build site to /public with
 ```
 ./bin/hugo 
 ```
+
+## TODO
+
+- [ ] Init Netifly CMS
+- [ ] Test Alternatives to Netifly

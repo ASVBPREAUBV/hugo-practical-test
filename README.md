@@ -31,4 +31,3 @@ build site to /public with
 - [ ] Test Alternatives to Netifly
 
 https://www.netlifycms.org/docs/intro/
-https://www.netlify.com/blog/2016/09/21/a-step-by-step-guide-victor-hugo-on-netlify/

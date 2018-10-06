@@ -29,3 +29,5 @@ build site to /public with
 - [ ] Init Netifly CMS
 - [ ] Test Netifly Forms
 - [ ] Test Alternatives to Netifly
+
+https://www.netlifycms.org/docs/intro/

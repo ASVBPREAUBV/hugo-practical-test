@@ -26,6 +26,7 @@ build site to /public with
 
 ## TODO
 
+- [ ] Init custom Theme
 - [ ] Init Netifly CMS
 - [ ] Test Netifly Forms
 - [ ] Test Alternatives to Netifly

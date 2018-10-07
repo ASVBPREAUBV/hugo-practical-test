@@ -32,3 +32,4 @@ build site to /public with
 - [ ] Test Alternatives to Netifly
 
 https://www.netlifycms.org/docs/intro/
+https://gohugo.io/themes/creating/

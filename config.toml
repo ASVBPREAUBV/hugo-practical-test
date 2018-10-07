@@ -1,7 +1,7 @@
 baseURL = "https://hugo-practical-test.netlify.com/"
 languageCode = "en-us"
-title = "Forty"
-theme = "forty"
+title = "Hugo Practical Test"
+theme = "neuendorf"
 
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""

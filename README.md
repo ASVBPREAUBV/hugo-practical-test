@@ -31,6 +31,7 @@ build site to /public with
 - [ ] Check Identities
 - [ ] Test Netifly Forms
 - [ ] Test Alternatives to Netifly
+- [ ] Check scss development
 
 https://www.netlifycms.org/docs/intro/
 https://gohugo.io/themes/creating/

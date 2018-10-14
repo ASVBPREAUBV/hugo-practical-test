@@ -31,7 +31,7 @@ build site to /public with
 - [ ] Check Identities
 - [ ] Test Netifly Forms
 - [ ] Test Alternatives to Netifly
-- [ ] Check scss development
+- [ ] Check scss development [follow thread](https://discourse.gohugo.io/t/sass-autoreload/14702)
 
 https://www.netlifycms.org/docs/intro/
 https://gohugo.io/themes/creating/

@@ -1,6 +1,6 @@
 <!-- SECTION: CSS -->
 {{ $inServerMode := .Site.IsServer }}
-{{ $sass         := resources.Get "style.sass" }}
+{{ $sass         := resources.Get "style.scss" }}
 {{ $sassIncludes := (slice "assets/dependencies") }}
 {{ $cssTarget    := "css/styles.css" }}
 {{ $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true "includePaths" $sassIncludes) (dict "targetPath" $cssTarget "includePaths" $sassIncludes "outputStyle" "compressed") }}
@@ -14,3 +14,4 @@
 {{ $css := $sass | resources.ExecuteAsTemplate "main.scss" . | toCSS $cssOpts | resources.PostCSS | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink | absURL }}" integrity="{{ $css.Data.Integrity }}" media="screen">
 {{ end }}
+

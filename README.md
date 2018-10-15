@@ -15,7 +15,7 @@ https://github.com/gohugoio/hugo/releases
 5. set themename in config YAML
 6. test static site
 ```
-./bin/hugo server -wDEF --disableFastRender --navigateToChanged
+./bin/hugo server -wDEF --disableFastRender
 ```
 
 ## production

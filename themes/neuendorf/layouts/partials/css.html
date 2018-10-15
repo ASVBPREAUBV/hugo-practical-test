@@ -9,10 +9,8 @@
 
 {{ $css := $sass | resources.ExecuteAsTemplate "main.scss" . | toCSS $cssOpts }}
 <link rel="stylesheet" href="{{ $css.Permalink | absURL }}" media="screen">
-
 {{ else }}
 
 {{ $css := $sass | resources.ExecuteAsTemplate "main.scss" . | toCSS $cssOpts | resources.PostCSS | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink | absURL }}" integrity="{{ $css.Data.Integrity }}" media="screen">
-
 {{ end }}

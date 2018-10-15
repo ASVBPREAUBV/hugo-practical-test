@@ -4,13 +4,13 @@
 {{ partial "css.html" . }}
 
 <body>
+<div class="container">
+    <h1>index</h1>
 
-<h1>index</h1>
-
-{{ range .Data.Pages }}
-<p>{{ .Title }}</p>
-{{ end }}
-
+    {{ range .Data.Pages }}
+    <p>{{ .Title }}</p>
+    {{ end }}
+</div>
 </body>
 </html>
 

@@ -59,8 +59,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 80vw; }
-
-/* http://meyerweb.com/eric/tools/css/reset/*/
+  width: 80vw;
+  background-color: yellow; }
 
 /*# sourceMappingURL=style.css.map */

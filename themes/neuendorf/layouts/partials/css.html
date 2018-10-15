@@ -1,13 +1,18 @@
-{{- $inServerMode := .Site.IsServer }}
-{{- $sass         := "style.sass" }}
-{{- $cssTarget    := "css/style.css" }}
-{{- $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
-{{- if $inServerMode }}
-{{- $css := resources.Get $sass | toCSS $cssOpts }}
-<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
-{{- else }}
-{{- $css := resources.Get $sass | toCSS $cssOpts | minify | fingerprint }}
-<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
-{{- end }}
-<link rel="stylesheet" type="text/css" href="{{ "/css/icons.css" | absURL }}">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<!-- SECTION: CSS -->
+{{ $inServerMode := .Site.IsServer }}
+{{ $sass         := resources.Get "style.sass" }}
+{{ $sassIncludes := (slice "assets/dependencies") }}
+{{ $cssTarget    := "css/styles.css" }}
+{{ $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true "includePaths" $sassIncludes) (dict "targetPath" $cssTarget "includePaths" $sassIncludes "outputStyle" "compressed") }}
+
+{{ if or ($inServerMode) (eq .Site.Params.env "LOCAL") }}
+
+{{ $css := $sass | resources.ExecuteAsTemplate "main.scss" . | toCSS $cssOpts }}
+<link rel="stylesheet" href="{{ $css.Permalink | absURL }}" media="screen">
+
+{{ else }}
+
+{{ $css := $sass | resources.ExecuteAsTemplate "main.scss" . | toCSS $cssOpts | resources.PostCSS | fingerprint }}
+<link rel="stylesheet" href="{{ $css.Permalink | absURL }}" integrity="{{ $css.Data.Integrity }}" media="screen">
+
+{{ end }}

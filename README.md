@@ -31,6 +31,7 @@ build site to /public with
 - [ ] Check Identities
 - [ ] Test Netifly Forms
 - [ ] Test Alternatives to Netifly
+- [ ] Building css in Netifly not possible
 
 https://www.netlifycms.org/docs/intro/
 https://gohugo.io/themes/creating/

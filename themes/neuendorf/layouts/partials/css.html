@@ -2,6 +2,7 @@
 {{ $inServerMode := .Site.IsServer }}
 {{ $sass         := resources.Get "style.scss" }}
 {{ $sassIncludes := (slice "assets/dependencies") }}
+{{ $css          := resources.Get "css/styles.css" }}
 {{ $cssTarget    := "css/styles.css" }}
 {{ $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true "includePaths" $sassIncludes) (dict "targetPath" $cssTarget "includePaths" $sassIncludes "outputStyle" "compressed") }}
 
@@ -11,7 +12,6 @@
 <link rel="stylesheet" href="{{ $css.Permalink | absURL }}" media="screen">
 {{ else }}
 
-{{ $css := resources.PostCSS | fingerprint }}
 <link rel="stylesheet" href="{{ $css.Permalink | absURL }}" integrity="{{ $css.Data.Integrity }}" media="screen">
 {{ end }}
 

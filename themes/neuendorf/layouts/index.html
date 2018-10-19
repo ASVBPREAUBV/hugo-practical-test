@@ -5,11 +5,13 @@
 
 <body>
 <div class="container">
-    <h1>index 12</h1>
+    {{ partial "header.html" . }}
 
     {{ range .Data.Pages }}
-    <p>{{ .Title }}</p>
+    {{ partial "article.html" . }}
     {{ end }}
+
+    {{ partial "footer.html" . }}
 </div>
 </body>
 </html>

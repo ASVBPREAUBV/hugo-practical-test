@@ -28,7 +28,7 @@ build site to /public with
 
 - [x] Init custom Theme
 - [x] Init Netifly CMS
-- [ ] Check Identities
+- [x] Check Identities
 - [ ] Test Netifly Forms
 - [ ] Test Alternatives to Netifly
 - [ ] Building css in Netifly not possible

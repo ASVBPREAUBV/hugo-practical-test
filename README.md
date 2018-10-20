@@ -32,6 +32,8 @@ build site to /public with
 - [ ] Test Netifly Forms
 - [ ] Test Alternatives to Netifly
 - [ ] Building css in Netifly not possible
+- [ ] Init sass bin for build
+- [ ] Init sass with makefile with concurrent dev
 
 https://www.netlifycms.org/docs/intro/
 https://gohugo.io/themes/creating/

@@ -2,4 +2,3 @@ baseURL = "https://hugo-practical-test.netlify.com/"
 languageCode = "en-us"
 title = "Hugo Practical Test"
 theme = "neuendorf"
-enableGitInfo = true
